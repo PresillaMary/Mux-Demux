@@ -53,12 +53,14 @@ Y0=s1′s0′I <br>
 
 ## Program:
 
+~~~
 module exp7a(S1,S0,I0,I1,I2,I3,Y);
 input S1,S0,I0,I1,I2,I3;
 output Y;
 assign y=((~S1)&(~S0)&I0)|((~S1)&S0&I1)|S1&(~S0)&I2|(S1&(~S0)&I3);
 endmodule
-
+~~~
+~~~
 module exp7b(S1,S0,I,Y0,Y1,Y2,Y3);
 input I,S0,S1;
 output Y0,Y1,Y2,Y3;
@@ -67,6 +69,7 @@ assign y=(~S1)&S0&I;
 assign y=S1&(~S0)&I;
 assign y=S1&S0&I;
 endmodule
+~~~
 
 
 ## RTL Schematic:
